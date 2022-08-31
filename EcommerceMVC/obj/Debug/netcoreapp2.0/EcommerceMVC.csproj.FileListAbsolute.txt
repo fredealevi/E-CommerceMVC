@@ -1,0 +1,17 @@
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\_Recursos\dados\livros.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\EcommerceMVC.deps.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\EcommerceMVC.runtimeconfig.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\EcommerceMVC.runtimeconfig.dev.json
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\EcommerceMVC.dll
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\bin\Debug\netcoreapp2.0\EcommerceMVC.pdb
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.csproj.AssemblyReference.cache
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.AssemblyInfoInputs.cache
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.AssemblyInfo.cs
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.csproj.CoreCompileInputs.cache
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.dll
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.pdb
+C:\Projetos\Alura\Back End\E-Commerce MVC\EcommerceMVC\EcommerceMVC\obj\Debug\netcoreapp2.0\EcommerceMVC.genruntimeconfig.cache
