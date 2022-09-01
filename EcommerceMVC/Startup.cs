@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,14 +19,13 @@ namespace EcommerceMVC
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddDbContext<ApplicationContext>();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -44,6 +44,10 @@ namespace EcommerceMVC
                     name: "default",
                     template: "{controller=Pedido}/{action=Carrossel}/{id?}");
             });
+
+            // garante que o servidor de serviço crie o Db da classe context no inicio da app.
+            // (serviceProvider precisa estar habilitado no configure).
+            serviceProvider.GetService<ApplicationContext>().Database.Migrate();
         }
     }
 }
