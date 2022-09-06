@@ -23,6 +23,7 @@ namespace EcommerceMVC
         {
             services.AddMvc();
             services.AddDbContext<ApplicationContext>();
+            services.AddTransient<IDataService, DataService>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)
@@ -47,7 +48,10 @@ namespace EcommerceMVC
 
             // garante que o servidor de serviço crie o Db da classe context no inicio da app.
             // (serviceProvider precisa estar habilitado no configure).
-            serviceProvider.GetService<ApplicationContext>().Database.Migrate();
+            // chamando o método InicializaDB da interface DataService (classe e interface precisa estar
+            // habilitado no Configure Service)
+            serviceProvider.GetService<IDataService>().InicializaDB();
+
         }
     }
 }
