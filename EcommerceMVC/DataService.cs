@@ -1,4 +1,6 @@
 ﻿using CasaDoCodigo.Models;
+using EcommerceMVC.Models;
+using EcommerceMVC.Repositories;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
@@ -7,40 +9,35 @@ namespace EcommerceMVC
 {
     class DataService : IDataService
     {
-        private readonly ApplicationContext contexto;
+        private readonly ApplicationContext context;
+        private readonly IProdutoRepository produtoRepository;
 
-        public DataService(ApplicationContext contexto)
+        public DataService(ApplicationContext contexto, IProdutoRepository produtoRepository)
         {
-            this.contexto = contexto;
+            this.context = contexto;
+            this.produtoRepository = produtoRepository;
         }
 
         public void InicializaDB()
         {
-            contexto.Database.EnsureCreated();
+            context.Database.EnsureCreated();
+            List<Livro> livros = GetLivros();
 
+            produtoRepository.SaveProdutos(livros);
+        }
+
+     
+
+        private static List<Livro> GetLivros()
+        {
             // cria uma variavel que vai armazenar os arquivos texto.
             var json = File.ReadAllText("livros.json");
 
             // deserializer (transforma em objeto) cria uma lista de objetos na clase Livro recebendo a variavel criada na linha de cima.
             var livros = JsonConvert.DeserializeObject<List<Livro>>(json);
-
-
-            // cria na classe produto um novo objeto para cada item da lista de livros (livros = <List<Livro>)..
-            foreach (var livro in livros)
-            {
-                contexto.Set<Produto>().Add(new Produto(livro.Codigo, livro.Nome, livro.Preco));
-            }
-            //Salva tudo no banco
-            contexto.SaveChanges();
+            return livros;
         }
     }
 
-    class Livro
-    {
-        public string Codigo { get; set; }
-
-        public string Nome { get; set; }
-
-        public decimal Preco { get; set; }
-    }
+  
 }

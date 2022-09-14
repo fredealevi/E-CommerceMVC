@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using EcommerceMVC.Repositories;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,7 @@ namespace EcommerceMVC
             services.AddMvc();
             services.AddDbContext<ApplicationContext>();
             services.AddTransient<IDataService, DataService>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IServiceProvider serviceProvider)

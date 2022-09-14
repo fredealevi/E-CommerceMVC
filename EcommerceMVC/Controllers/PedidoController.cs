@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EcommerceMVC.Repositories;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,18 @@ namespace EcommerceMVC.Controllers
 {
     public class PedidoController : Controller
     {
+        // cria o acesso do controller ao ProdutoRepository através do construtor.
+        private readonly IProdutoRepository produtoRepository;
+
+        public PedidoController(IProdutoRepository produtoRepository)
+        {
+            this.produtoRepository = produtoRepository;
+        }
+
         public IActionResult Carrossel()
         {
-            return View();
+            // retorna a view com o metodo get produtos
+            return View(produtoRepository.GetProdutos());
         }
 
         public IActionResult Carrinho()
